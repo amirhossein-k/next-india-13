@@ -10,12 +10,24 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
+  const [loading, setLoading] = useState(false);
 
-  const onLogin = async () => {};
+  const onLogin = async () => {
+    try {
+      setLoading(true);
+      const res = await axios.
+    } catch (err) {
+      console.log(err, "login failed");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <h1 className="text-center text-black text-2xl">login</h1>
+        <h1 className="text-center text-black text-2xl">
+          {loading ? "processing" : "login"}
+        </h1>
 
         <hr />
 
