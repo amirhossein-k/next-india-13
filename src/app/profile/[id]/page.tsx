@@ -1,7 +1,8 @@
+"use client";
 import React from "react";
 
-const page = () => {
-  return <div></div>;
+const page = ({params}: {params: {id: string}}) => {
+  return <div>profile Id {params.id}</div>;
 };
 
 export default page;
