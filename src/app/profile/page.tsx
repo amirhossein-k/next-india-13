@@ -5,7 +5,7 @@ import {useRouter} from "next/navigation";
 import React, {useState} from "react";
 import {toast} from "react-hot-toast/headless";
 
-const UserProfile = async () => {
+const UserProfile = () => {
   const router = useRouter();
   const [data, setData] = useState("nothing");
   const logout = async () => {
@@ -33,7 +33,7 @@ const UserProfile = async () => {
         {data === "nothing" ? (
           "Nothing"
         ) : (
-          <Link href={`/profile/${data}`}></Link>
+          <Link href={`/profile/${data}`}>{data}</Link>
         )}
       </h2>
       <hr />

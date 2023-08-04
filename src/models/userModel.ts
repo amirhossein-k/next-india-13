@@ -1,5 +1,17 @@
 import mongoose from "mongoose";
 
+interface USER {
+  username: string;
+  email: string;
+  password: string;
+  isVerfied: boolean;
+  isAdmin: boolean;
+  forgetPasswordToken: string;
+  forgetPasswordTokenExpiry: Date;
+  verifyToken: string;
+  verifyTokenExpiry: Date;
+}
+
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
