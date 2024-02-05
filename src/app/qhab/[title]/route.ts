@@ -13,6 +13,8 @@ import {NextRequest, NextResponse} from "next/server";
 //   return NextResponse.json({name});
 // }
 
+// 4747
+
 export async function GET(req: NextRequest, {params}: any) {
   const title = params.title;
   console.log(title);
